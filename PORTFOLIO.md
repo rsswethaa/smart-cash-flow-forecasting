@@ -22,7 +22,7 @@ See the main [`README.md`](README.md) for details.
 
 ## 2. Gamified Library System
 
-**Status:** Academic project
+**Status:** Academic project / modern portfolio reconstruction
 
 Developed an interactive gamified web system intended to improve reading engagement among students.
 
@@ -33,59 +33,50 @@ Developed an interactive gamified web system intended to improve reading engagem
 - Gamification of reading activity
 - Student engagement
 - Technology applied to education
+- Relational database design
+- Technical documentation and testing
 
-**Skills demonstrated:**
-- Web application thinking
-- User-engagement design
-- Problem solving
-- Education technology concepts
-
-> Source code is not currently published in this repository. This entry documents the project as listed in my academic portfolio.
+**Standalone repository:** [Gamified Library System](https://github.com/rsswethaa/gamified-library-system)
 
 ---
 
 ## 3. Automated Emergency Response System
 
-**Status:** Academic project
+**Status:** Academic project / modern portfolio reconstruction
 
 Designed an automated alert framework for accident detection and rapid medical emergency reporting.
-
-**Problem addressed:** Delays in recognising and reporting accidents can increase emergency-response time.
 
 **Project direction:**
 - Automated incident detection concept
 - Emergency notification workflow
-- Technology-enabled response coordination
-- System design around time-critical events
+- Severity classification
+- Incident audit trail
+- Web dashboard
+- Database-backed status management
 
-**Skills demonstrated:**
-- Systems thinking
-- Automation concepts
-- Problem solving
-- Technology for social impact
+**Standalone repository:** [Automated Emergency Response System](https://github.com/rsswethaa/automated-emergency-response-system)
 
-> This page describes the verified project scope from my CV and does not claim a deployed production system.
+> Educational prototype only; not a certified emergency, medical or public-safety system.
 
 ---
 
 ## 4. Ecological Study of Aakkulam Lake
 
-**Status:** Research project
+**Status:** Research project / modern reproducible portfolio reconstruction
 
 Conducted field research on the impact of urban pollution on Aakkulam Lake and the ecological sustainability of local wetlands.
 
 **Focus areas:**
 - Environmental sustainability
-- Field research
-- Data collection and interpretation
-- Urban ecological impact
-- Research communication
+- Field research design
+- Structured data collection
+- Python/pandas analysis
+- Data documentation
+- Reproducible reporting
 
-**Skills demonstrated:**
-- Research design
-- Analytical thinking
-- Sustainability awareness
-- Evidence-based reporting
+**Standalone repository:** [Aakkulam Lake Ecological Study](https://github.com/rsswethaa/aakkulam-lake-ecological-study)
+
+> The repository's sample dataset is illustrative reconstructed portfolio data, not the original field dataset.
 
 ---
 
