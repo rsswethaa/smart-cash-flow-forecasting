@@ -89,34 +89,6 @@ Conducted field research on the impact of urban pollution on Aakkulam Lake and t
 
 ---
 
-## Research Publications
-
-### The Lack of Embedded Sustainability in Elementary Education
-Research focused on gaps in early environmental education frameworks and the need to embed sustainability more meaningfully into foundational learning.
-
-### Ecological Education as a Catalyst for Sustainable School Culture
-Study of institutional approaches that can encourage sustainable habits and stronger environmental culture among students.
-
----
-
-## Technical and Business Foundation
-
-My project work is supported by a multidisciplinary background combining:
-
-- B.Tech in Computer Science and Business Systems
-- Master of Applied Finance studies at the University of Auckland
-- Big Data Computing
-- Google Cloud Computing Foundations
-- Privacy and Security in Online Social Media
-- Financial Accounting
-- Microeconomics
-- Banking fundamentals
-- E-Business
-- Entrepreneurship
-- Organisational Behaviour
-
-This combination shapes the kind of projects I want to build: practical applications at the intersection of **technology, finance, data and real-world business problems**.
-
 ## Current Development Direction
 
 I am currently strengthening my portfolio toward AI-assisted full-stack development by focusing on:
