@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlowWise NZ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="shell">
+  <header class="hero">
+    <div><p class="eyebrow">Student cash-flow intelligence · New Zealand</p><h1>FlowWise NZ</h1><p>Forecast rent, bills and income before your balance becomes a problem.</p></div>
+    <div class="balance"><span>60-day ending balance</span><strong>${{ '%.2f'|format(forecast.ending_balance) }}</strong></div>
+  </header>
+  <section class="metrics">
+    <article><span>Lowest balance</span><strong>${{ '%.2f'|format(forecast.lowest_balance) }}</strong><small>{{ forecast.lowest_balance_date }}</small></article>
+    <article><span>Days below buffer</span><strong>{{ forecast.days_below_buffer }}</strong><small>${{ '%.0f'|format(forecast.safety_buffer) }} safety buffer</small></article>
+    <article><span>Extra reserve</span><strong>${{ '%.2f'|format(forecast.recommended_extra_reserve) }}</strong><small>to protect the buffer</small></article>
+  </section>
+  <section class="grid">
+    <article class="card"><h2>What FlowWise sees</h2>{% for line in forecast.explanations %}<p>{{ line }}</p>{% endfor %}<a class="button" href="{{ url_for('export_forecast') }}">Download forecast CSV</a></article>
+    <article class="card"><h2>Recurring cash flow</h2><ul>{% for item in items %}<li><span>{{ item.name }} <small>{{ item.frequency }}</small></span><strong class="{% if item.amount < 0 %}out{% else %}in{% endif %}">{{ '%+.2f'|format(item.amount) }}</strong></li>{% endfor %}</ul></article>
+  </section>
+  <section class="card"><h2>Upcoming 60 days</h2><div class="timeline">{% for row in forecast.rows if row.events %}<div class="day {% if row.below_buffer %}risk{% endif %}"><span>{{ row.date }}</span><div>{% for event in row.events %}<small>{{ event.name }} {{ '%+.2f'|format(event.amount) }}</small>{% endfor %}</div><strong>${{ '%.2f'|format(row.balance) }}</strong></div>{% endfor %}</div></section>
+  <footer>Educational personal-finance planning tool. Forecasts are estimates, not financial advice or bank guarantees.</footer>
+</main>
+</body>
+</html>

@@ -1,66 +1,37 @@
 # FlowWise NZ — Smart Cash-Flow & Bill Forecasting
 
-A student-focused personal finance prototype designed around a common New Zealand problem: bills, rent, subscriptions and everyday spending are spread across different dates, making it difficult to know whether the next account balance will actually be enough.
+FlowWise NZ is a working student-focused personal-finance forecasting application built around a common New Zealand budgeting problem: income, fortnightly rent, subscriptions and bills arrive on different schedules, so the current bank balance alone can be misleading.
 
-## What the project does
+## Working implementation
 
-FlowWise forecasts upcoming recurring payments and gives the user an early warning when their projected balance may run short.
+- weekly, fortnightly, monthly and one-off cash-flow scheduling
+- NZ-style fortnightly rent/income modelling
+- recurring-payment detection from transaction history
+- daily projected balances and low-buffer dates
+- expense-increase / income-reduction stress scenarios
+- recommended reserve needed to protect a chosen buffer
+- forecast back-testing metrics (MAE, RMSE and bias)
+- explainable risk messages rather than a black-box score
+- CSV forecast export
+- SQLite persistence for recurring items and forecast runs
+- Flask dashboard + JSON API
+- unit/API tests, Docker and CI
 
-The experience starts with personalised onboarding rather than a generic dashboard. The user enters information such as:
+The bundled data is demonstration data. FlowWise does not connect to a bank account and does not provide regulated financial advice.
 
-- current balance and typical income
-- pay frequency
-- rent amount and frequency (including fortnightly rent)
-- recurring bills and subscriptions
-- preferred safety buffer
-- savings priority
+## Run
 
-The app then builds a personalised cash-flow view.
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
-## Current prototype features
+Open `http://127.0.0.1:5000`.
 
-- Personalised onboarding flow
-- Recurring bill and subscription tracking
-- Fortnightly / weekly / monthly payment support
-- Upcoming-payment forecast
-- Projected-balance warning
-- Student-friendly spending buffer
-- Autopay reminder suggestions
-- Lower-cost alternative prompts
-- Browser-based persistence using `localStorage`
-- Responsive interface for desktop and mobile
+## API
 
-## Why I built it
+`POST /api/forecast` accepts starting balance, safety buffer, horizon, start date and optional stress-scenario percentages. `GET /export/forecast.csv` exports the projected daily balance path.
 
-As a Master of Applied Finance student in Auckland with a Computer Science and Business Systems background, I wanted to build something that connects finance, technology and an everyday user problem rather than creating a purely academic project.
+## Why this project
 
-The project is intended to develop into a higher-end financial planning product with richer forecasting, secure account integrations and AI-assisted financial insights.
-
-## AI-assisted development approach
-
-I use AI tools as part of the development workflow for ideation, implementation support, debugging, refactoring and test planning. AI-generated suggestions are treated as drafts: changes are reviewed, understood and tested before they are accepted.
-
-## Roadmap
-
-- Authentication and multi-user accounts
-- PostgreSQL-backed transaction and bill data
-- API layer for recurring-payment data
-- Cash-flow forecasting engine
-- Secure open-banking integrations where permitted
-- AI-generated explanations of forecast risks
-- Notification and reminder service
-- Subscription alternative recommendations
-- Automated testing
-- Staging and production deployment workflow
-- GitHub pull-request based development process
-
-## Other portfolio work
-
-See [`PORTFOLIO.md`](PORTFOLIO.md) for additional projects in web systems, automation and research.
-
-## About
-
-**Swethaa Sri Ravi Sankar**  
-Master of Applied Finance — University of Auckland  
-B.Tech Computer Science and Business Systems  
-Auckland, New Zealand
+This project deliberately connects applied finance with software engineering: cash-flow timing, liquidity buffers, scenario analysis, forecast error and explainability are implemented as code rather than described only in documentation.
